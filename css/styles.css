@@ -133,6 +133,22 @@ address {
     display: flex;
 }
 
+.header-links {
+    position: relative;
+}
+
+.header-links:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    content: "";
+    background-color: var(--brand-light-blue);
+    border-radius: 2px;
+    opacity: 0;
+}
+
 .header-nav-link {
     color: var(--brand-dark);
 }
@@ -309,9 +325,8 @@ address {
     font-size: 36px;
     line-height: 1.1666;
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--brand-black);
-    margin: 0px 0px 50px 0px;
+    margin-bottom: 50px;
 }
 
 .info {
@@ -319,6 +334,35 @@ address {
     display: block;
     display: flex;
     gap: 30px;
+}
+
+.images {
+    position: relative;
+}
+
+.label-text {
+    position: absolute;
+    right: 0;
+    /* bottom: 4px; */
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    height: 70px;
+    padding: 25px 0;
+    color: var(--brand-white);
+    background-color: rgba(47, 48, 58, 0.8);
+    text-align: center;
+    opacity: 0;
+}
+
+.images:hover .label-text {
+    opacity: 1;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.images:hover {
+    cursor: pointer;
 }
 
 .text-about-employers {
@@ -585,6 +629,32 @@ address {
     border: 1px solid #EEEEEE;
 }
 
+.link-about-text {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding: 63px 24px 63px 24px;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--brand-white);
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 350ms;
+}
+
+.all-about:hover .link-about-text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.div-link-about-text {
+    position: relative;
+    overflow: hidden;
+}
+
+
 .div-all-about {
     padding: 20px 24px 20px 24px;
 }
@@ -687,6 +757,52 @@ address {
 
 .div-footer {
     display: block;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.modal {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    background-color: var(--brand-white);
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 300ms linear;
+}
+
+.button-exit {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ECECEC;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--brand-dark);
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 

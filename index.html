@@ -18,23 +18,29 @@
             <a class="logo logo-header" href="index.html">Web<span class="web-header">Studio</span></a>
             <nav class="header-navigation">
                 <ul class="header-nav">
-                    <li class="header-link-studio"><a class="header-nav-link header-studio current" href="index.html">Студія</a></li>
-                    <li class="header-link-portfolio"><a class="header-nav-link header-potfolio" href="portfolio.html">Портфоліо</a></li>
-                    <li class="header-link-contacts"><a class="header-nav-link header-contacts" href="#">Контакти</a></li>
+                    <li class="header-links header-link-studio">
+                        <a class="header-nav-link header-studio current" href="index.html">Студія</a>
+                    </li>
+                    <li class="header-links header-link-portfolio">
+                        <a class="header-nav-link header-potfolio" href="portfolio.html">Портфоліо</a>
+                    </li>
+                    <li class="header-links header-link-contacts">
+                        <a class="header-nav-link header-contacts" href="#">Контакти</a>
+                    </li>
                 </ul>
             </nav>
             <ul class="header-contact">  
                 <li class="header-link-mail">
                     <a class="header-mail" href="mailto:info@devstudio.com">
-                        <svg class="icon-header-contact" width="16" height="12">
-                            <use href="./images/icons.svg#icon-img-mail"></use>
-                        </svg>info@devstudio.com</a>
+                    <svg class="icon-header-contact" width="16" height="12">
+                        <use href="./images/icons.svg#icon-img-mail"></use>
+                    </svg>info@devstudio.com</a>
                 </li>   
                 <li class="header-link-telnumber">
                     <a class="header-telnumber" href="tel:+380961111111">
-                        <svg class="icon-header-contact" width="10" height="16">
-                            <use href="./images/icons.svg#icon-img-phone"></use>
-                        </svg>+38 096 111 11 11</a>
+                    <svg class="icon-header-contact" width="10" height="16">
+                        <use href="./images/icons.svg#icon-img-phone"></use>
+                    </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
         </div>
@@ -43,7 +49,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
-                <button class="button-service" type="button">Замовити послугу</button>
+                <button class="button-service" type="button" data-modal-open>Замовити послугу</button>
             </div>
         </section>
         <section class="main">
@@ -103,9 +109,18 @@
             <div class="container">
                 <h2 class="about">Чим ми займаємося</h2>
                 <ul class="info">
-                    <li><img class="images-employment employment-one" src="./images/img-one.jpg" width="370" height="296" alt="our employment"></li>
-                    <li><img class="images-employment employment-two" src="./images/img-two.jpg" width="370" height="296" alt="our employment"></li>
-                    <li><img class="images-employment employment-three" src="./images/img-three.jpg" width="370" height="296" alt="our employment"></li>
+                    <li class="images">
+                        <img class="images-employment employment-one" src="./images/img-one.jpg" width="370" height="296" alt="our employment">
+                        <p class="label-text">Декстопні додатки</p>
+                    </li>
+                    <li class="images">
+                        <img class="images-employment employment-two" src="./images/img-two.jpg" width="370" height="296" alt="our employment">
+                        <p class="label-text">Мобільні додатки</p>
+                    </li>
+                    <li class="images">
+                        <img class="images-employment employment-three" src="./images/img-three.jpg" width="370" height="296" alt="our employment">
+                        <p class="label-text">Дизайнерські рішення</p>
+                    </li>
                 </ul>
                 </div>
             </section>
@@ -370,5 +385,15 @@
         </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="button-exit" data-modal-close>
+                <svg class="img-icon-exit" width="11" height="11">
+                    <use href="./images/icons.svg#icon-img-exit"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
