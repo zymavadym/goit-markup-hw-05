@@ -640,7 +640,7 @@ address {
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
     opacity: 0;
-    transition: transform 350ms;
+    transition: transform 450ms;
 }
 
 .all-about:hover .link-about-text {
@@ -648,12 +648,10 @@ address {
     opacity: 1;
 }
 
-
 .div-link-about-text {
     position: relative;
     overflow: hidden;
 }
-
 
 .div-all-about {
     padding: 20px 24px 20px 24px;
